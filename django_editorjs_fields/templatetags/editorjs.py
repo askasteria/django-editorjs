@@ -16,6 +16,16 @@ def generate_list(data):
     tag = 'ol' if data.get('style') == 'ordered' else 'ul'
     return f'<{tag}>{list_li}</{tag}>'
 
+def generate_checklist(data):
+    it = '<ul style="list-style: none; padding: 0;">'
+    for item in data.get('items'):
+        it += "<li>"
+        it += f"<input type='checkbox' name='checkbox_group'>"
+        it += f"<label for='checkbox2'>{item}</label>"
+        it += "</li>"
+    it += "</ul>"
+    return it
+
 
 def generate_header(data):
     text = data.get('text').replace('&nbsp;', ' ')
@@ -170,5 +180,7 @@ def editorjs(value):
             html_list.append(generate_quote(data))
         elif type == 'linktool':
             html_list.append(generate_link(data))
+        elif type == 'checklist':
+            html_list.append(generate_checklist(data))
 
     return mark_safe(''.join(html_list))
