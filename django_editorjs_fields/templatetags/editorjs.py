@@ -21,7 +21,7 @@ def generate_checklist(data):
     for item in data.get('items'):
         it += "<li>"
         it += f"<input type='checkbox' name='checkbox_group'>"
-        it += f"<label for='checkbox2'>{item}</label>"
+        it += f"<label for='checkbox'>{item.get('text')}</label>"
         it += "</li>"
     it += "</ul>"
     return it
