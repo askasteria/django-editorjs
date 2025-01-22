@@ -1,11 +1,11 @@
 [tool.poetry]
 name = "django-editorjs"
-version = "0.2.7"
+version = "0.2.7a"
 description = "Django plugin for using Editor.js"
-authors = ["Ilya Kotlyakov <m@2ik.ru>"]
+authors = ["Ilya Kotlyakov <m@2ik.ru>", "Oleg Kohl <o@jstm.io>"]
 license = "MIT"
-repository = "https://github.com/2ik/django-editorjs-fields"
-documentation = "https://github.com/2ik/django-editorjs-fields"
+repository = "https://github.com/askasteria/django-editorjs/"
+documentation = "https://github.com/askasteria/django-editorjs/"
 readme = "README.md"
 keywords = ["editorjs", "django-editor", "django-wysiwyg", "wysiwyg", "django-admin"]
 
